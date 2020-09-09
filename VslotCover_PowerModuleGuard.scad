@@ -1,5 +1,5 @@
 
-length = 206; // [3:0.1:500]
+length = 206; //206; // [3:0.1:500]
 
 // conver extension on one side
 // leave it 0 (zero) if you don't need it
@@ -25,10 +25,11 @@ h_top_cover = 1*0.6;
 wall_thick = 1*0.8; // 
 tb_thick = 1*0; // top-bottom thickness 0.8 -v3> 0.4 -v4> 0
 
-side_w1 = 4;
+side_w1 = 0;
 side_h1 = h1 + 3;
 side_w2 = top2_w/2 + 30;
-side_w3 = 6;
+side_w3 = 10;
+side_w4 = top2_w/2 + 2;
 side_thick = 0.8;
 
 
@@ -48,7 +49,8 @@ linear_extrude(height = length) {
 						[side_w2, side_h1 + h_top_cover + side_thick],
 						[side_w2, side_h1 + h_top_cover],
 						[side_w3, side_h1 + h_top_cover],
-						[top2_w/2 + side_add_w, h1 + h_top_cover],            
+						[side_w4, h1 ],
+						[top2_w/2 + side_add_w, h1 ],            
 						[top_w/2 + side_add_w, h1],
 						[w1/2, h1],
 						[w2/2, h2],
